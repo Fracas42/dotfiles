@@ -30,5 +30,8 @@
     extraModulePackages = [ config.boot.kernelPackages.rtw89 ];
   };
 
-  services = { };
+  programs = {
+    wireshark.enable = true;
+    light.enable = true;
+  };
 }

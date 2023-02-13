@@ -37,5 +37,6 @@
     #Others
     chatterino2
     teams
+    wireshark
   ];
 }

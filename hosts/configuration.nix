@@ -7,11 +7,13 @@
   users.users.fracas = {
     isNormalUser = true;
     description = "Fracas";
-    extraGroups = [ "networkmanager" "wheel" "video" "docker" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "docker" "input" "wireshark" ];
   };
 
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  security.sudo.wheelNeedsPassword = false;
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -107,8 +109,6 @@
       experimental-features = nix-command flakes
     '';
   };
-
-  programs.light.enable = true;
 
   virtualisation.docker.enable = true;
 
