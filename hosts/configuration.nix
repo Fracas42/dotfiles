@@ -3,6 +3,8 @@
 {
   imports = [ ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.fracas = {
     isNormalUser = true;
