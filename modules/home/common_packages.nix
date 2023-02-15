@@ -22,6 +22,7 @@
     tree
     wget
     nixpkgs-fmt
+    clang-tools
 
     #Git
     gitkraken
