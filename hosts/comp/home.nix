@@ -6,6 +6,7 @@
     ../../modules/home/common_packages.nix
     # apps
     ../../modules/home/git.nix
+    ../../modules/home/vscode.nix
     # services
     (import ../../modules/home/i3-plasma.nix { modifier = "Mod4"; })
     ../../modules/home/fusuma.nix

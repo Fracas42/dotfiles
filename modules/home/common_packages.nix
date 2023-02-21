@@ -8,7 +8,6 @@
 
     #IDE
     vim
-    vscodium
     jetbrains.idea-ultimate
 
     #Com
@@ -23,6 +22,8 @@
     wget
     nixpkgs-fmt
     clang-tools
+    gcc
+    gdb
 
     #Git
     gitkraken
@@ -34,10 +35,16 @@
     xdotool
     xclip
     imagemagick
+    cmake
 
     #Others
     chatterino2
     teams
     wireshark
   ];
+
+  home.sessionVariables = {
+    # for c++ and libmagic (in that order)
+    LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.file}/lib";
+  };
 }
