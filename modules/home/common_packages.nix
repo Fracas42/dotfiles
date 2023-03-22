@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-stable, pkgs-lastest, ... }:
 # Packages to install
 {
   home.packages = with pkgs; [
     # Browser
     firefox
-    google-chrome
+    pkgs-lastest.google-chrome
 
     #IDE
     vim
@@ -15,14 +15,13 @@
     slack
 
     #Term
-    kitty
+    pkgs-stable.kitty
 
     #CLI
     tree
     wget
     nixpkgs-fmt
     clang-tools
-    gcc
     gdb
 
     #Git
@@ -30,21 +29,17 @@
     
     #Games
     prismlauncher
+    starsector
 
     #Utils
     xdotool
     xclip
     imagemagick
-    cmake
 
     #Others
     chatterino2
-    teams
     wireshark
+    authy
+    vlc
   ];
-
-  home.sessionVariables = {
-    # for c++ and libmagic (in that order)
-    LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.file}/lib";
-  };
 }
