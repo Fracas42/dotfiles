@@ -72,9 +72,6 @@
       PAGER = "less";
     };
     systemPackages = with pkgs; [
-      vim
-      git
-      wget
       inputs.home-manager.defaultPackage.${system}
     ];
   };
@@ -104,7 +101,6 @@
     };
 
     # Enable nixFlakes on system
-    package = pkgs.nixVersions.unstable;
     registry.nixpkgs.flake = inputs.nixpkgs;
 
     extraOptions = ''

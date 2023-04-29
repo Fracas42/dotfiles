@@ -36,7 +36,10 @@
       location = "$HOME/.config/nixpkgs";
     in
     {
-      nixosConfigurations = import ./hosts { inherit inputs location lib pkgs system; };
+      nixosConfigurations = import ./hosts {
+        inherit inputs location lib system pkgs-stable;
+        pkgs-unstable = pkgs;
+      };
 
       homeConfigurations = import ./home.nix { inherit inputs lib pkgs pkgs-stable pkgs-lastest system; };
     };

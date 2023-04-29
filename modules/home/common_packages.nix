@@ -35,6 +35,7 @@
     xdotool
     xclip
     imagemagick
+    wget
 
     #Others
     chatterino2

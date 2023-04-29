@@ -1,10 +1,10 @@
-{ modifier }:
+{ modifier, pkgs }:
 # I3 configuration
 #
 # Args:
 # - modifier: i3 modifier
 #
-{ config, pkgs, ... }:
+{ config, ... }:
 # I3 configuration to use with KDE
 {
   # Files to include in the home

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-stable, ... }:
 # Fracas Laptop configuration
 {
   imports = [
@@ -8,7 +8,7 @@
     ../../modules/home/git.nix
     ../../modules/home/vscode.nix
     # services
-    (import ../../modules/home/i3-plasma.nix { modifier = "Mod4"; })
+    (import ../../modules/home/i3-plasma.nix { modifier = "Mod4"; pkgs = pkgs-stable; })
     ../../modules/home/fusuma.nix
   ];
 
@@ -27,5 +27,9 @@
 
   xresources.properties = {
     "Xft.dpi" = 120;
+  };
+
+  home.shellAliases = {
+    g = "git";
   };
 }
