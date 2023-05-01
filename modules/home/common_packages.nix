@@ -13,6 +13,7 @@
     #Com
     discord
     slack
+    tdesktop
 
     #Term
     pkgs-stable.kitty
