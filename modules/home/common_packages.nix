@@ -40,7 +40,7 @@
 
     #Others
     chatterino2
-    wireshark
+    pkgs-stable.wireshark
     authy
     vlc
   ];
