@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-lastest.url = "github:nixos/nixpkgs/master";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-22.11";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -12,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, nixpkgs-lastest, home-manager }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, nixpkgs-lastest, home-manager, nix-vscode-extensions }@inputs:
     let
       system = "x86_64-linux";
 
@@ -33,6 +34,8 @@
         config.allowUnfree = true;
       };
 
+      vscode-extensions = inputs.nix-vscode-extensions.extensions."${system}";
+
       location = "$HOME/.config/nixpkgs";
     in
     {
@@ -41,6 +44,6 @@
         pkgs-unstable = pkgs;
       };
 
-      homeConfigurations = import ./home.nix { inherit inputs lib pkgs pkgs-stable pkgs-lastest system; };
+      homeConfigurations = import ./home.nix { inherit inputs lib pkgs pkgs-stable pkgs-lastest system vscode-extensions; };
     };
 }

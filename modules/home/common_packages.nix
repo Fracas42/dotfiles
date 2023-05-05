@@ -43,5 +43,6 @@
     pkgs-stable.wireshark
     authy
     vlc
+    nil
   ];
 }
