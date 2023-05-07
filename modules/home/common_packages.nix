@@ -10,6 +10,10 @@
     vim
     jetbrains.idea-ultimate
 
+    #Frameworks
+    pkgs-stable.wireshark
+    postman
+
     #Com
     discord
     slack
@@ -40,7 +44,6 @@
 
     #Others
     chatterino2
-    pkgs-stable.wireshark
     authy
     vlc
     nil
