@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-stable, pkgs-lastest, ... }:
+{ pkgs, pkgs-stable, pkgs-lastest, ... }:
 # Packages to install
 {
   home.packages = with pkgs; [
@@ -37,9 +37,8 @@
     starsector
 
     #Utils
-    xdotool
     xclip
-    imagemagick
+    maim
     wget
 
     #Others

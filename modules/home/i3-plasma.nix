@@ -140,7 +140,7 @@
         "${modifier}+Ctrl+Shift+8" = "move container to workspace 18; workspace 18";
         "${modifier}+Ctrl+Shift+9" = "move container to workspace 19; workspace 19";
         "${modifier}+r" = ''mode "resize"'';
-        "Print" = "exec --no-startup-id sh -c 'import png:- | xclip -selection clipboard -t image/png'";
+        "Print" = "exec --no-startup-id sh -c 'maim -s | xclip -selection clipboard -t image/png'";
       };
       menu = "${pkgs.plasma-workspace}/bin/krunner";
 
