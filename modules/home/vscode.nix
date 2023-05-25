@@ -22,10 +22,8 @@
       ms-toolsai.vscode-jupyter-cell-tags
       ms-toolsai.vscode-jupyter-slideshow
       ms-vscode.cmake-tools
-      ms-vscode.cpptools
-      ms-vscode.cpptools-extension-pack
-      ms-vscode.cpptools-themes
       ms-vscode.makefile-tools
+      llvm-vs-code-extensions.vscode-clangd
       orta.vscode-jest
       rust-lang.rust-analyzer
       twxs.cmake
