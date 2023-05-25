@@ -115,4 +115,15 @@
     autoUpgrade.enable = true;
     autoUpgrade.allowReboot = true;
   };
+
+  swapDevices =
+    [ { device = "/dev/mapper/swap"; }
+    ];
+
+  systemd.services.systemd-logind.serviceConfig = {
+    Environment = "SYSTEMD_LOG_LEVEL=debug";
+  };
+
+  services.logind.lidSwitch = "suspend-then-hibernate";
+  systemd.sleep.extraConfig = "HibernateDelaySec=1h";
 }

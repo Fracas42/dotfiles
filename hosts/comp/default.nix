@@ -29,6 +29,12 @@ in
       "/crypto_keyfile.bin" = null;
     };
 
+    initrd.systemd.enable = true;
+
+    resumeDevice = "/dev/mapper/swap";
+
+    initrd.luks.devices."swap".device = "/dev/disk/by-uuid/adde261c-328c-45c4-af26-fb526a7d1533";
+
     # Install wireless driver for rtw89
     extraModulePackages = [ rtw89 ];
   };
