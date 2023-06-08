@@ -46,5 +46,8 @@
     authy
     vlc
     nil
+
+    #Network
+    ciscoPacketTracer8
   ];
 }
