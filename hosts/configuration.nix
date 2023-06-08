@@ -111,7 +111,7 @@
   virtualisation.docker.enable = true;
 
   system = {
-    stateVersion = "22.11";
+    stateVersion = "23.05";
     autoUpgrade.enable = true;
     autoUpgrade.allowReboot = true;
   };
