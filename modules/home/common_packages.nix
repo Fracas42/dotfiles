@@ -18,6 +18,7 @@
     discord
     slack
     tdesktop
+    thunderbird
 
     #Term
     pkgs-stable.kitty
