@@ -10,7 +10,6 @@
       eamodio.gitlens
       jnoortheen.nix-ide
       kevinrose.vsc-python-indent
-      kurojifusky.majira-strawberry-vscode
       laurenclark.sappho
       maelvalais.autoconf
       ms-python.isort
