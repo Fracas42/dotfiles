@@ -57,14 +57,9 @@
 
         "${modifier}+Return" = "exec kitty";
         "${modifier}+Shift+q" = "kill";
-        "${modifier}+z" = "exec --no-startup-id morc_menu";
-        "${modifier}+t" = "exec --no-startup-id pkill picom ";
-        "${modifier}+Ctrl+t" = "exec --no-startup-id picom --experimental-backends -b";
-        "${modifier}+Ctrl+y" = "exec --no-startup-id systemctl --user restart polybar";
-        "${modifier}+Ctrl+c" = "exec --no-startup-id conky -d -q";
         "${modifier}+Shift+e" = "exec qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1";
 
-        "${modifier}+ctrl+r" = "move workspace to output left";
+        "${modifier}+ctrl+r" = "move workspace to output next";
         "${modifier}+j" = "focus left";
         "${modifier}+k" = "focus down";
         "${modifier}+l" = "focus up";
@@ -197,6 +192,7 @@
       for_window [title="Desktop — Plasma"] kill; border pixel 1
       for_window [class="ksplashqml"] kill; border pixel 1
       for_window [class="kscreen_osd_service"] floating enable; border none
+      for_window [title="Desktop @ QRect"] kill; floating enable; border none
     '';
   };
 }
