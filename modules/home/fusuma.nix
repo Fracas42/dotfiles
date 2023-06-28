@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 # Fusuma configuration for touchpad gesture
 {
   services.fusuma = {

@@ -1,4 +1,4 @@
-{ config, inputs, lib, location, pkgs, user, system, ... }:
+{ inputs, pkgs, system, ... }:
 
 {
   imports = [ ];
@@ -71,7 +71,7 @@
       VISUAL = "vim";
       PAGER = "less";
     };
-    systemPackages = with pkgs; [
+    systemPackages = [
       inputs.home-manager.defaultPackage.${system}
     ];
   };

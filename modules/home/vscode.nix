@@ -1,4 +1,4 @@
-{ config, pkgs, vscode-extensions, ... }:
+{ pkgs, vscode-extensions, ... }:
 # VSCode config
 
 {

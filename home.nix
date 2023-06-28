@@ -1,4 +1,4 @@
-{ inputs, lib, pkgs, pkgs-stable, pkgs-lastest, system, vscode-extensions, ... }:
+{ inputs, pkgs, pkgs-stable, pkgs-lastest, vscode-extensions, ... }:
 let
   mkHome = modules:
     inputs.home-manager.lib.homeManagerConfiguration {

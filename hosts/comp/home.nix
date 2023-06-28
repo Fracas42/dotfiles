@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-stable, ... }:
+{ pkgs-stable, ... }:
 # Fracas Laptop configuration
 {
   imports = [
