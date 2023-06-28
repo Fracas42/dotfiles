@@ -10,6 +10,7 @@
     # services
     (import ../../modules/home/i3-plasma.nix { modifier = "Mod4"; pkgs = pkgs-stable; })
     ../../modules/home/fusuma.nix
+    ../../modules/home/kitty.nix
   ];
 
   home.username = "fracas";

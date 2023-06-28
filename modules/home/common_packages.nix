@@ -20,9 +20,6 @@
     tdesktop
     thunderbird
 
-    #Term
-    pkgs-stable.kitty
-
     #CLI
     tree
     wget
