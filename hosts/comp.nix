@@ -1,4 +1,4 @@
-{ system, inputs, location, lib, pkgs-stable, pkgs-unstable, ... }:
+{ system, inputs, location, pkgs-stable, pkgs-unstable, lanzaboote, ... }:
 # Configuration for fracas laptop
 let
   host = {
@@ -17,5 +17,6 @@ inputs.nixpkgs-stable.lib.nixosSystem {
   modules = [
     ./comp
     ./configuration.nix
+    lanzaboote.nixosModules.lanzaboote
   ];
 }

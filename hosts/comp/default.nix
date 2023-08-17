@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   imports = [
@@ -13,12 +13,18 @@
   boot = {
     # Bootloader.
     loader = {
-      systemd-boot.enable = true;
+      systemd-boot.enable = lib.mkForce false;
+      
 
       efi = {
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot/efi";
       };
+    };
+    
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/etc/secureboot";
     };
 
     # Setup keyfile
@@ -31,6 +37,8 @@
     resumeDevice = "/dev/mapper/swap";
 
     initrd.luks.devices."swap".device = "/dev/disk/by-uuid/adde261c-328c-45c4-af26-fb526a7d1533";
+
+    bootspec.enable = true;
 
     # Install wireless driver for rtw89
   };

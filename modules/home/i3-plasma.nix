@@ -137,7 +137,7 @@
         "${modifier}+r" = ''mode "resize"'';
         "Print" = "exec --no-startup-id sh -c 'maim -s | xclip -selection clipboard -t image/png'";
       };
-      menu = "${pkgs.plasma-workspace}/bin/krunner";
+      menu = "--no-startup-id qdbus org.kde.krunner /App display";
 
       defaultWorkspace = "workspace 1";
 

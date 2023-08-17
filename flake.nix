@@ -11,9 +11,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    lanzaboote.url = "github:nix-community/lanzaboote";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, nixpkgs-lastest, home-manager, nix-vscode-extensions }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, nixpkgs-lastest, home-manager, nix-vscode-extensions, lanzaboote }@inputs:
     let
       system = "x86_64-linux";
 
@@ -40,7 +42,7 @@
     in
     {
       nixosConfigurations = import ./hosts {
-        inherit inputs location lib system pkgs-stable;
+        inherit inputs location lib system pkgs-stable lanzaboote;
         pkgs-unstable = pkgs;
       };
 
