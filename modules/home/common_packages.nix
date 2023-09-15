@@ -47,5 +47,6 @@
 
     #Network
     ciscoPacketTracer8
+    inetutils
   ];
 }
