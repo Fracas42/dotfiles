@@ -1,5 +1,8 @@
 { pkgs, pkgs-stable, pkgs-lastest, ... }:
 # Packages to install
+let
+  parsec-gaming = pkgs.callPackage ../pkgs/parsecd.nix { };
+in
 {
   home.packages = with pkgs; [
     # Browser
@@ -44,6 +47,7 @@
     authy
     vlc
     nil
+    parsec-gaming
 
     #Network
     ciscoPacketTracer8
