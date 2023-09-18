@@ -49,6 +49,7 @@ in
     vlc
     nil
     parsec-gaming
+    direnv
 
     #Network
     ciscoPacketTracer8
