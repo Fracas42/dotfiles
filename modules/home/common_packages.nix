@@ -29,6 +29,7 @@ in
     nixpkgs-fmt
     clang-tools
     gdb
+    unzip
 
     #Git
     gitkraken
