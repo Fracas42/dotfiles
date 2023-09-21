@@ -46,5 +46,6 @@
   programs = {
     wireshark.enable = true;
     light.enable = true;
+    ssh.startAgent = true;
   };
 }
