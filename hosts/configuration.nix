@@ -20,8 +20,12 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "Europe/Paris";
+  time = {
+    # Set your time zone.
+    timeZone = "Europe/Paris";
+    # Use local time instead of UTC for dualboot compatibility
+    hardwareClockInLocalTime = true;
+  };
 
   # Select internationalisation properties.
   i18n = {
