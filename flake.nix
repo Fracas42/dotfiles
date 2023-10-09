@@ -18,6 +18,7 @@
   outputs = { self, nixpkgs, nixpkgs-stable, nixpkgs-lastest, home-manager, nix-vscode-extensions, lanzaboote }@inputs:
     let
       system = "x86_64-linux";
+      username = "fracas";
 
       lib = nixpkgs.lib;
 
@@ -46,6 +47,6 @@
         pkgs-unstable = pkgs;
       };
 
-      homeConfigurations = import ./home.nix { inherit inputs lib pkgs pkgs-stable pkgs-lastest system vscode-extensions; };
+      homeConfigurations = import ./home.nix { inherit inputs lib pkgs pkgs-stable pkgs-lastest system vscode-extensions username; };
     };
 }

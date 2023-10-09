@@ -1,4 +1,4 @@
-{ pkgs-stable, ... }:
+{ pkgs-stable, username, ... }:
 # Fracas Laptop configuration
 {
   imports = [
@@ -11,10 +11,11 @@
     (import ../../modules/home/i3-plasma.nix { modifier = "Mod4"; pkgs = pkgs-stable; })
     ../../modules/home/fusuma.nix
     ../../modules/home/kitty.nix
+    ../../modules/home/sym_link_config.nix
   ];
 
-  home.username = "fracas";
-  home.homeDirectory = "/home/fracas";
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
 
   home.stateVersion = "22.11";
 

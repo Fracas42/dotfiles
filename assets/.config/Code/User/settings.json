@@ -1,0 +1,28 @@
+{
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nil",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.indentSize": "tabSize",
+    "[nix]": {
+        "editor.tabSize": 2,
+    },
+    "cmake.configureOnOpen": true,
+    "clang-format.assumeFilename": ".clang-format",
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "git.confirmSync": false,
+    "git.suggestSmartCommit": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "[c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+}
