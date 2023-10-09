@@ -15,7 +15,6 @@ in
 
     #Frameworks
     pkgs-stable.wireshark
-    postman
 
     #Com
     discord
