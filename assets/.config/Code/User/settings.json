@@ -25,4 +25,6 @@
     "[c]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
+    "terminal.integrated.shellIntegration.history": 10000,
+    "editor.fontFamily": "'Hack Nerd Font', monospace",
 }
