@@ -37,6 +37,7 @@
       git = true;
       icons = true;
     };
+    bat.enable = true;
   };
 
   xresources.properties = {
