@@ -180,7 +180,7 @@
       for_window [class="Conky"] floating enable; border none
       for_window [title="plasma-desktop"] floating enable; border none
       for_window [title="win7"] floating enable; border none
-      for_window [class="krunner"] floating enable; border none, move down 100px
+      for_window [class="krunner"] floating enable; border none
       for_window [class="Kmix"] floating enable; border none
       for_window [class="Klipper"] floating enable; border none
       for_window [class="Plasmoidviewer"] floating enable; border none
