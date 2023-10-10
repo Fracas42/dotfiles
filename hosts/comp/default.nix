@@ -47,34 +47,5 @@
     wireshark.enable = true;
     light.enable = true;
     ssh.startAgent = true;
-  };
-
-  services = {
-    hostapd = {
-      enable = false;
-      interface = "wlo1";
-      channel = 36;
-      wpaPassphrase = "Spidoulebest";
-      ssid = "Le wifi des ACUs";
-      hwMode = "a";
-      extraConfig = ''
-        ctrl_interface=/var/run/hostapd
-        ctrl_interface_group=0
-
-        country_code=FR
-        ieee80211d=1
-
-        ieee80211n=1
-        ht_capab=[MAX-AMSDU-7935][HT40+][SHORT-GI-20][SHORT-GI-40][DSSS_CCK-40]
-
-        ieee80211ac=1
-        vht_capab=[SHORT-GI-80][MU-BEAMFORMEE]
-
-        vht_oper_chwidth=1
-        vht_oper_centr_freq_seg0_idx=42
-      '';
-    };
-  };
-
-  
+  };  
 }
