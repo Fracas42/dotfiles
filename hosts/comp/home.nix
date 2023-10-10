@@ -24,7 +24,18 @@
   programs = {
     # Let Home Manager install and manage itself.
     home-manager.enable = true;
-    bash.enable = true;
+    bash = {
+      enable = true;
+      historyControl = [ "erasedups" ];
+      bashrcExtra = ''
+        shopt -s histappend
+      '';
+    };
+    eza = {
+      enable = true;
+      enableAliases = true;
+      git = true;
+    };
   };
 
   xresources.properties = {
