@@ -49,6 +49,7 @@ in
     nil
     parsec-gaming
     direnv
+    nerdfonts
 
     #Network
     ciscoPacketTracer8
