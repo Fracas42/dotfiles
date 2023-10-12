@@ -21,6 +21,12 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  home.file.".face.icon" = 
+  {
+    source = ../../assets/pfp/pfp-512x512.png;
+    target = ".face.icon";
+  };
+
   programs = {
     # Let Home Manager install and manage itself.
     home-manager.enable = true;
