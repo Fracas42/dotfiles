@@ -6,6 +6,7 @@ let
   files = [
     ".config/Code/User/keybindings.json"
     ".config/Code/User/settings.json"
+    ".config/plasma-org.kde.plasma.desktop-appletsrc"
   ];
 
   links = pkgs.lib.lists.forEach files (file:
