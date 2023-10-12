@@ -1,4 +1,4 @@
-{ system, inputs, location, pkgs-stable, pkgs-unstable, lanzaboote, ... }:
+{ system, inputs, location, pkgs-stable, pkgs-unstable, lanzaboote, username, ... }:
 # Configuration for fracas laptop
 let
   host = {
@@ -11,7 +11,7 @@ inputs.nixpkgs-stable.lib.nixosSystem {
   inherit system;
 
   specialArgs = {
-    inherit host inputs location system pkgs-stable pkgs-unstable;
+    inherit host inputs location system pkgs-stable pkgs-unstable username;
   };
 
   modules = [

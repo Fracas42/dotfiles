@@ -11,11 +11,6 @@
   #home.file.".background-image" = {
   #  source = ../../assets/wallpapers/forest-botw.jpg;
   #};
-  # We add this file to disable the systemBoot option to allow i3 to replace
-  # KNWM
-  home.file.".config/startkderc" = {
-    source = ../../assets/.config/kde/i3-plasma/startkderc;
-  };
 
   xsession.enable = true;
 
@@ -57,7 +52,8 @@
 
         "${modifier}+Return" = "exec kitty";
         "${modifier}+Shift+q" = "kill";
-        "${modifier}+Shift+e" = "exec qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1";
+        "${modifier}+Shift+e" = "exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1";
+        "${modifier}+Escape" = "exec --no-startup-id /bin/sh -c 'sleep 0.5 && qdbus org.kde.kglobalaccel /component/ksmserver invokeShortcut \"Lock Session\"'";
 
         "${modifier}+ctrl+r" = "move workspace to output next";
         "${modifier}+j" = "focus left";
@@ -94,6 +90,7 @@
         "${modifier}+minus" = "scratchpad show";
         "${modifier}+Ctrl+Right" = "workspace next";
         "${modifier}+Ctrl+Left" = "workspace prev";
+
         "${modifier}+0" = "workspace 10";
         "${modifier}+1" = "workspace 1";
         "${modifier}+2" = "workspace 2";
@@ -184,11 +181,9 @@
       for_window [class="Kmix"] floating enable; border none
       for_window [class="Klipper"] floating enable; border none
       for_window [class="Plasmoidviewer"] floating enable; border none
-      for_window [class="(?i)*nextcloud*"] floating disable
       for_window [class="plasmashell" window_type="notification"] border none, move right 700px, move down 450px
       for_window [class="plasmashell" window_type="dialog"] floating enable, border pixel 1, resize set 400 300
       no_focus [class="plasmashell" window_type="notification"]
-      no_focus [class="plasmashell" window_type="on_screen_display"]
       for_window [title="Desktop — Plasma"] kill; border pixel 1
       for_window [class="ksplashqml"] kill; border pixel 1
       for_window [class="kscreen_osd_service"] floating enable; border none

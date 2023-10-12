@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
   services = {
     xserver = {
@@ -13,7 +13,7 @@
             manage = "desktop";
             name = "plasma5+i3";
             start = ''
-              env KDEWM=${pkgs.i3-gaps}/bin/i3 ${pkgs.plasma-workspace}/bin/startplasma-x11
+              env ${pkgs.plasma-workspace}/bin/startplasma-x11
             '';
           }
         ];
@@ -22,4 +22,29 @@
       windowManager.i3.enable = true;
     };
   };
+
+  systemd.user.services = {
+    i3 = {
+      description = "i3 for Plasma via systemd";
+      before = [ "plasma-workspace-x11.target" ];
+      wantedBy = [ "plasma-workspace-x11.target" ];
+
+      serviceConfig = 
+      {
+        ExecStart="%h/.nix-profile/bin/i3";
+        ExecReload="%h/.nix-profile/bin/i3-msg reload";
+        Restart = "on-failure";
+      };
+
+      path = [
+        "/run/wrappers"
+        "/home/${username}/.nix-profile"
+        "/etc/profiles/per-user/${username}"
+        "/nix/var/nix/profiles/default"
+        "/run/current-system/sw"
+      ];
+    };
+  };
+
+  systemd.user.services.plasma-kwin_x11.enable = false;
 }

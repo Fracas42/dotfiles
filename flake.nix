@@ -43,7 +43,7 @@
     in
     {
       nixosConfigurations = import ./hosts {
-        inherit inputs location lib system pkgs-stable lanzaboote;
+        inherit inputs location lib system pkgs-stable lanzaboote username;
         pkgs-unstable = pkgs;
       };
 
