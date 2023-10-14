@@ -53,4 +53,6 @@
   home.shellAliases = {
     g = "git";
   };
+
+  services.picom.enable = true;
 }
