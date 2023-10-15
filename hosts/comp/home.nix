@@ -12,6 +12,7 @@
     ../../modules/home/fusuma.nix
     ../../modules/home/kitty.nix
     ../../modules/home/sym_link_config.nix
+    ../../modules/home/picom.nix
   ];
 
   home.username = username;
@@ -53,6 +54,4 @@
   home.shellAliases = {
     g = "git";
   };
-
-  services.picom.enable = true;
 }
