@@ -7,11 +7,6 @@
 { config, ... }:
 # I3 configuration to use with KDE
 {
-  # Files to include in the home
-  #home.file.".background-image" = {
-  #  source = ../../assets/wallpapers/forest-botw.jpg;
-  #};
-
   xsession.enable = true;
 
   # Disable the command set by the i3 service of home manager
@@ -168,11 +163,11 @@
       defaultWorkspace = "workspace 1";
 
       startup = [
-        #{
-        #  command = "${pkgs.feh}/bin/feh --bg-scale ${../../assets/wallpapers/forest-botw.jpg}";
-        #  always = true;
-        #  notification = false;
-        #}
+        {
+          command = "${pkgs.feh}/bin/feh --bg-scale ${../../assets/wallpapers/silly-blep-wallpaper.png}";
+          always = true;
+          notification = false;
+        }
         {
           command = ''pkill "ksplashqml"'';
           always = true;
