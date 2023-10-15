@@ -47,50 +47,64 @@
       };
 
       keybindings = pkgs.lib.mkOptionDefault {
+        # Borders
         "${modifier}+u" = "border none";
         "${modifier}+n" = "border pixel 1";
 
+        # Programs
         "${modifier}+Return" = "exec kitty";
-        "${modifier}+Shift+q" = "kill";
         "${modifier}+Shift+e" = "exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1";
         "${modifier}+Escape" = "exec --no-startup-id /bin/sh -c 'sleep 0.5 && qdbus org.kde.kglobalaccel /component/ksmserver invokeShortcut \"Lock Session\"'";
 
-        "${modifier}+ctrl+r" = "move workspace to output next";
+        # Utils
+        "${modifier}+Shift+q" = "kill";
+        "Print" = "exec --no-startup-id sh -c 'maim -s | xclip -selection clipboard -t image/png'";
+
+        # Focus
         "${modifier}+j" = "focus left";
         "${modifier}+k" = "focus down";
         "${modifier}+l" = "focus up";
         "${modifier}+semicolon" = "focus right";
+
         "${modifier}+Left" = "focus left";
         "${modifier}+Down" = "focus down";
         "${modifier}+Up" = "focus up";
         "${modifier}+Right" = "focus right";
+
+        "${modifier}+a" = "focus parent";
+        "${modifier}+Shift+a" = "focus child";
+        "${modifier}+space" = "focus mode_toggle";
+
+        # Move container
         "${modifier}+Shift+j" = "move left";
         "${modifier}+Shift+k" = "move down";
         "${modifier}+Shift+l" = "move up";
         "${modifier}+Shift+semicolon" = "move right";
+
         "${modifier}+Shift+Left" = "move left";
         "${modifier}+Shift+Down" = "move down";
         "${modifier}+Shift+Up" = "move up";
         "${modifier}+Shift+Right" = "move right";
-        "${modifier}+b" = "workspace back_and_forth";
-        "${modifier}+Shift+b" = "move container to workspace back_and_forth; workspace back_and_forth";
+
+        # Split
         "${modifier}+h" = "split h;exec notify-send 'tile horizontally'";
         "${modifier}+v" = "split v;exec notify-send 'tile vertically'";
         "${modifier}+q" = "split toggle";
-        "${modifier}+f" = "fullscreen toggle";
+
+        # Layout
         "${modifier}+s" = "layout stacking";
         "${modifier}+w" = "layout tabbed";
         "${modifier}+e" = "layout toggle split";
-        "${modifier}+Shift+space" = "floating toggle";
-        "${modifier}+space" = "focus mode_toggle";
-        "${modifier}+Shift+s" = "sticky toggle";
-        "${modifier}+a" = "focus parent";
-        "${modifier}+Shift+a" = "focus child";
-        "${modifier}+Shift+minus" = "move scratchpad";
-        "${modifier}+minus" = "scratchpad show";
-        "${modifier}+Ctrl+Right" = "workspace next";
-        "${modifier}+Ctrl+Left" = "workspace prev";
 
+        # Windows mode toggles
+        "${modifier}+f" = "fullscreen toggle";
+        "${modifier}+Shift+space" = "floating toggle";
+        "${modifier}+Shift+s" = "sticky toggle";
+        
+        
+        # Workspaces
+        
+        ## Switch workspace
         "${modifier}+0" = "workspace 10";
         "${modifier}+1" = "workspace 1";
         "${modifier}+2" = "workspace 2";
@@ -101,6 +115,7 @@
         "${modifier}+7" = "workspace 7";
         "${modifier}+8" = "workspace 8";
         "${modifier}+9" = "workspace 9";
+
         "${modifier}+Ctrl+0" = "workspace 20";
         "${modifier}+Ctrl+1" = "workspace 11";
         "${modifier}+Ctrl+2" = "workspace 12";
@@ -111,6 +126,13 @@
         "${modifier}+Ctrl+7" = "workspace 17";
         "${modifier}+Ctrl+8" = "workspace 18";
         "${modifier}+Ctrl+9" = "workspace 19";
+
+        "${modifier}+Ctrl+Right" = "workspace next";
+        "${modifier}+Ctrl+Left" = "workspace prev";
+        "${modifier}+b" = "workspace back_and_forth";
+        "${modifier}+Shift+b" = "move container to workspace back_and_forth; workspace back_and_forth";
+
+        ## Move container to workspace and switch workspace
         "${modifier}+Shift+0" = "move container to workspace 10; workspace 10";
         "${modifier}+Shift+1" = "move container to workspace 1; workspace 1";
         "${modifier}+Shift+2" = "move container to workspace 2; workspace 2";
@@ -121,6 +143,7 @@
         "${modifier}+Shift+7" = "move container to workspace 7; workspace 7";
         "${modifier}+Shift+8" = "move container to workspace 8; workspace 8";
         "${modifier}+Shift+9" = "move container to workspace 9; workspace 9";
+
         "${modifier}+Ctrl+Shift+0" = "move container to workspace 20; workspace 20";
         "${modifier}+Ctrl+Shift+1" = "move container to workspace 11; workspace 11";
         "${modifier}+Ctrl+Shift+2" = "move container to workspace 12; workspace 12";
@@ -131,9 +154,15 @@
         "${modifier}+Ctrl+Shift+7" = "move container to workspace 17; workspace 17";
         "${modifier}+Ctrl+Shift+8" = "move container to workspace 18; workspace 18";
         "${modifier}+Ctrl+Shift+9" = "move container to workspace 19; workspace 19";
+
+        "${modifier}+ctrl+r" = "move workspace to output next";
+
+        # Modes
         "${modifier}+r" = ''mode "resize"'';
-        "Print" = "exec --no-startup-id sh -c 'maim -s | xclip -selection clipboard -t image/png'";
       };
+
+      workspaceAutoBackAndForth = true;
+
       menu = "--no-startup-id qdbus org.kde.krunner /App display";
 
       defaultWorkspace = "workspace 1";
@@ -155,6 +184,31 @@
 
       terminal = "kitty";
 
+      modes.resize = pkgs.lib.mkOptionDefault {
+        "Escape" = "mode default";
+        "Return" = "mode default";
+        "${modifier}+r" = "mode default";
+
+        "j" = "resize shrink width 5 px or 5 ppt";
+        "k" = "resize grow height 5 px or 5 ppt";
+        "l" = "resize shrink height 5 px or 5 ppt";
+        "semicolon" = "resize grow width 5 px or 5 ppt";
+
+        "Left" = "resize shrink width 10 px or 10 ppt";
+        "Down" = "resize grow height 10 px or 10 ppt";
+        "Up" = "resize shrink height 10 px or 10 ppt";
+        "Right" = "resize grow width 10 px or 10 ppt";
+
+        "Shift+j" = "resize shrink width 1 px or 1 ppt";
+        "Shift+k" = "resize grow height 1 px or 1 ppt";
+        "Shift+l" = "resize shrink height 1 px or 1 ppt";
+        "Shift+semicolon" = "resize grow width 1 px or 1 ppt";
+
+        "Shift+Left" = "resize shrink width 1 px or 1 ppt";
+        "Shift+Down" = "resize grow height 1 px or 1 ppt";
+        "Shift+Up" = "resize shrink height 1 px or 1 ppt";
+        "Shift+Right" = "resize grow width 1 px or 1 ppt";
+      };
     };
 
     extraConfig = ''
