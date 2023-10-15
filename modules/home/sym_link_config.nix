@@ -4,11 +4,15 @@ let
   git_assets_path = "/home/${username}/.config/nixpkgs/assets";
 
   files = [
+    #VSCode
     ".config/Code/User/keybindings.json"
     ".config/Code/User/settings.json"
+
+    # KDE / Plasma
     ".config/plasma-org.kde.plasma.desktop-appletsrc"
     ".config/plasmanotifyrc"
     ".config/plasmashellrc"
+    ".config/kdeglobals"
   ];
 
   links = pkgs.lib.lists.forEach files (file:
