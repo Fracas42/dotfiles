@@ -1,30 +1,42 @@
 {
-    "nix.enableLanguageServer": true,
-    "nix.serverPath": "nil",
+    // Editor
     "editor.wordWrap": "on",
     "editor.minimap.enabled": false,
     "editor.indentSize": "tabSize",
+    "editor.inlineSuggest.enabled": true,
+    "editor.fontFamily": "'Hack Nerd Font', monospace",
+    "editor.formatOnSave": true,
+    // Terminal
+    "terminal.integrated.shellIntegration.history": 10000,
+    // Git
+    "git.confirmSync": false,
+    "git.suggestSmartCommit": false,
+    // Languages
+    // Nix
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nil",
     "[nix]": {
         "editor.tabSize": 2,
     },
-    "cmake.configureOnOpen": true,
-    "clang-format.assumeFilename": ".clang-format",
+    // CPP
     "[cpp]": {
-        "editor.defaultFormatter": "xaver.clang-format"
+        "editor.defaultFormatter": "xaver.clang-format",
+        "files.insertFinalNewline": true,
     },
-    "editor.formatOnSave": true,
+    // C
+    "[c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "files.insertFinalNewline": true,
+    },
+    // Python
     "[python]": {
         "editor.formatOnType": true
     },
-    "git.confirmSync": false,
-    "git.suggestSmartCommit": false,
+    // Javascript
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "editor.inlineSuggest.enabled": true,
-    "[c]": {
-        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
-    },
-    "terminal.integrated.shellIntegration.history": 10000,
-    "editor.fontFamily": "'Hack Nerd Font', monospace",
+    // Extensions
+    "cmake.configureOnOpen": true,
+    "clang-format.assumeFilename": ".clang-format",
 }
