@@ -1,4 +1,4 @@
-{ inputs, pkgs, system, ... }:
+{ inputs, pkgs, system, pkgs-unstable, ... }:
 
 {
   imports = [ ];
@@ -112,7 +112,10 @@
     '';
   };
 
-  virtualisation.docker.enable = true;
+  virtualisation = {
+    docker.enable = true;
+    virtualbox.host.enable = true;
+  };
 
   system = {
     stateVersion = "23.05";
