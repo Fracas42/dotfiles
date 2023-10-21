@@ -13,6 +13,7 @@
     ../../modules/home/kitty.nix
     ../../modules/home/sym_link_config.nix
     ../../modules/home/picom.nix
+    ../../modules/home/shell.nix
   ];
 
   home.username = username;
@@ -28,33 +29,12 @@
     target = ".face.icon";
   };
 
-  programs = {
-    # Let Home Manager install and manage itself.
-    home-manager.enable = true;
-    bash = {
-      enable = true;
-      historyControl = [ "erasedups" ];
-      bashrcExtra = ''
-        shopt -s histappend
-      '';
-    };
-    eza = {
-      enable = true;
-      enableAliases = true;
-      git = true;
-      icons = true;
-    };
-    bat.enable = true;
-  };
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
 
   xresources.properties = {
     "Xft.dpi" = 120;
   };
-
-  home.shellAliases = {
-    g = "git";
-  };
-
 
   services.kdeconnect = {
     enable = true;
