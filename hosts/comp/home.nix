@@ -54,4 +54,10 @@
   home.shellAliases = {
     g = "git";
   };
+
+
+  services.kdeconnect = {
+    enable = true;
+    indicator = true;
+  };
 }
