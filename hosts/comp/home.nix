@@ -40,4 +40,20 @@
     enable = true;
     indicator = true;
   };
+
+  programs = {
+    browserpass = {
+      enable = true;
+      browsers = [ "chrome" ];
+    };
+    password-store = {
+      enable = true;
+    };
+    gpg.enable = true;
+  };
+
+  services.gpg-agent = {
+    enable = true;
+    pinentryFlavor = "qt";
+  };
 }
