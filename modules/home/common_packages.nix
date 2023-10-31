@@ -48,6 +48,7 @@ in
     vlc
     nil
     parsec-gaming
+    anydesk
     direnv
     nerdfonts
 
