@@ -40,6 +40,8 @@
 
     bootspec.enable = true;
 
+    initrd.kernelModules = [ "amdgpu" ];
+
     # Install wireless driver for rtw89
   };
 
