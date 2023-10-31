@@ -53,7 +53,8 @@
 
         # Utils
         "${modifier}+Shift+q" = "kill";
-        "Print" = "exec --no-startup-id sh -c 'maim -s | xclip -selection clipboard -t image/png'";
+        "Print" = "exec --no-startup-id qdbus org.kde.kglobalaccel /component/org_kde_spectacle_desktop org.kde.kglobalaccel.Component.invokeShortcut RectangularRegionScreenShot";
+        "Shift+Print" = "exec --no-startup-id qdbus org.kde.kglobalaccel /component/org_kde_spectacle_desktop org.kde.kglobalaccel.Component.invokeShortcut FullScreenScreenShot";
 
         # Focus
         "${modifier}+j" = "focus left";

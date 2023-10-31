@@ -39,7 +39,6 @@ in
 
     #Utils
     xclip
-    maim
     wget
 
     #Others
