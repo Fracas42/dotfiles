@@ -38,9 +38,16 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][2][Applets][18][Configuration]
-PreloadWeight=39
+PreloadWeight=100
 popupHeight=600
 popupWidth=528
+
+[Containments][2][Applets][18][Configuration][Appearance]
+showSeconds=true
+
+[Containments][2][Applets][18][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=840
 
 [Containments][2][Applets][24]
 immutability=1
@@ -48,7 +55,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][24][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=0
+PreloadWeight=40
 
 [Containments][2][Applets][24][Configuration][Appearance]
 chartFace=org.kde.ksysguard.barchart
@@ -83,7 +90,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][25][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=15
+PreloadWeight=100
 
 [Containments][2][Applets][25][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -106,7 +113,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][26][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=0
+PreloadWeight=20
 
 [Containments][2][Applets][26][Configuration][Appearance]
 chartFace=org.kde.ksysguard.piechart
@@ -130,7 +137,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][28][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=0
+PreloadWeight=50
 
 [Containments][2][Applets][28][Configuration][Appearance]
 chartFace=org.kde.ksysguard.piechart
@@ -151,7 +158,7 @@ plugin=org.kde.plasma.kickoff
 [Containments][2][Applets][3][Configuration]
 PreloadWeight=100
 popupHeight=614
-popupWidth=789
+popupWidth=793
 
 [Containments][2][Applets][3][Configuration][ConfigDialog]
 DialogHeight=720
@@ -172,7 +179,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][30][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=0
+PreloadWeight=45
 
 [Containments][2][Applets][30][Configuration][Appearance]
 chartFace=org.kde.ksysguard.piechart
@@ -199,7 +206,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][33][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=0
+PreloadWeight=20
 
 [Containments][2][Applets][33][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -246,7 +253,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][2][Applets][40][Configuration]
-PreloadWeight=0
+PreloadWeight=75
 popupHeight=576
 popupWidth=432
 
@@ -266,7 +273,7 @@ PreloadWeight=100
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
-DialogHeight=100
+DialogHeight=93
 DialogWidth=1920
 
 [Containments][2][Configuration]
@@ -310,7 +317,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][8][Applets][11][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][8][Applets][12]
 immutability=1
@@ -334,7 +341,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][15][Configuration]
-PreloadWeight=45
+PreloadWeight=55
 
 [Containments][8][Applets][15][Configuration][ConfigDialog]
 DialogHeight=720
@@ -362,7 +369,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][20][Configuration]
-PreloadWeight=0
+PreloadWeight=30
 
 [Containments][8][Applets][20][Configuration][General]
 showPercentage=true
@@ -372,14 +379,14 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=100
+PreloadWeight=84
 
 [Containments][8][Applets][22]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][22][Configuration]
-PreloadWeight=5
+PreloadWeight=4
 
 [Containments][8][Applets][24]
 immutability=1
@@ -393,17 +400,24 @@ immutability=1
 plugin=org.kde.kscreen
 
 [Containments][8][Applets][31][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][8][Applets][38][Configuration]
 PreloadWeight=42
+
+[Containments][8][Applets][41]
+immutability=1
+plugin=org.kde.kdeconnect
+
+[Containments][8][Applets][41][Configuration]
+PreloadWeight=60
 
 [Containments][8][Applets][9]
 immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][8][Applets][9][Configuration]
-PreloadWeight=5
+PreloadWeight=10
 
 [Containments][8][ConfigDialog]
 DialogHeight=720
@@ -413,13 +427,13 @@ DialogWidth=960
 PreloadWeight=0
 
 [Containments][8][General]
-extraItems=org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.keyboardlayout,org.kde.plasma.nightcolorcontrol,org.kde.plasma.bluetooth,org.kde.kscreen
+extraItems=org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.keyboardlayout,org.kde.plasma.nightcolorcontrol,org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.kdeconnect
 hiddenItems=Microsoft Teams - Preview1
-knownItems=org.kde.plasma.clipboard,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.keyboardlayout,org.kde.plasma.nightcolorcontrol,org.kde.plasma.bluetooth,org.kde.kscreen
+knownItems=org.kde.plasma.clipboard,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.keyboardlayout,org.kde.plasma.nightcolorcontrol,org.kde.plasma.bluetooth,org.kde.kscreen,org.kde.kdeconnect
 
 [Containments][8][Shortcuts]
 global=
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/creeps,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/eplace,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tiger,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/nix-pills,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tcom-tps,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/yaka,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/libzork,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/spider,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tiger-ref,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/cpp-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/js-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/js-rush,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/java-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9
+screenMapping=desktop:/js-rush,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/java-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/creeps,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tiger,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tcom-tps,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/cpp-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/spider,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tiger-ref,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/js-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/eplace,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/nix-pills,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/libzork,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/yaka,0,6639caec-51ad-4f92-a4de-74d28f190be9
