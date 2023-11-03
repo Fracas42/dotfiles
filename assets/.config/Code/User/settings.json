@@ -18,6 +18,16 @@
     "[nix]": {
         "editor.tabSize": 2,
     },
+    "nix.serverSettings": {
+        "nil": {
+            "formatting": {
+                "command": [
+                    "nixpkgs-fmt"
+                ]
+            },
+            "autoArchive": "true",
+        }
+    },
     // CPP
     "[cpp]": {
         "editor.defaultFormatter": "xaver.clang-format",
