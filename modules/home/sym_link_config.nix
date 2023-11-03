@@ -13,6 +13,9 @@ let
     ".config/plasmanotifyrc"
     ".config/plasmashellrc"
     ".config/kdeglobals"
+
+    # XDG
+    ".config/mimeapps.list"
   ];
 
   links = pkgs.lib.lists.forEach files (file:

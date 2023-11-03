@@ -1,0 +1,25 @@
+[Added Associations]
+application/x-7z-compressed=org.kde.dolphin.desktop;
+application/zip=org.kde.dolphin.desktop;
+
+[Default Applications]
+application/x-7z-compressed=org.kde.dolphin.desktop;
+application/zip=org.kde.dolphin.desktop;
+text/html=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/discord-712465656758665259=discord-712465656758665259.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/notion=notion-app-enhanced.desktop
+x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/slack=slack.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/gitkraken=GitKraken.desktop
+x-scheme-handler/chrome=google-chrome.desktop
+application/x-extension-htm=google-chrome.desktop
+application/x-extension-html=google-chrome.desktop
+application/x-extension-shtml=google-chrome.desktop
+application/xhtml+xml=google-chrome.desktop
+application/x-extension-xhtml=google-chrome.desktop
+application/x-extension-xht=google-chrome.desktop
