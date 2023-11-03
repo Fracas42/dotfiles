@@ -39,4 +39,5 @@
     // Extensions
     "cmake.configureOnOpen": true,
     "clang-format.assumeFilename": ".clang-format",
+    "git.openRepositoryInParentFolders": "never",
 }
