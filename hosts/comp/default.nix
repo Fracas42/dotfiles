@@ -14,14 +14,13 @@
     # Bootloader.
     loader = {
       systemd-boot.enable = lib.mkForce false;
-      
 
       efi = {
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot";
       };
     };
-    
+
     lanzaboote = {
       enable = true;
       pkiBundle = "/etc/secureboot";
@@ -45,5 +44,5 @@
     wireshark.enable = true;
     light.enable = true;
     ssh.startAgent = true;
-  };  
+  };
 }
