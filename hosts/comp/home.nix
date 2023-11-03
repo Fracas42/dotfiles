@@ -29,6 +29,10 @@
     target = ".face.icon";
   };
 
+  home.sessionVariables = {
+    NIXPKGS_ALLOW_UNFREE = 1;
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
