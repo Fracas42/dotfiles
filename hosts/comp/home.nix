@@ -23,8 +23,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  home.file.".face.icon" = 
-  {
+  home.file.".face.icon" = {
     source = ../../assets/pfp/pfp-512x512.png;
     target = ".face.icon";
   };
@@ -48,7 +47,7 @@
   programs = {
     browserpass = {
       enable = true;
-      browsers = [ "chrome" ];
+      browsers = [ "chrome" "firefox" ];
     };
     password-store = {
       enable = true;

@@ -1,5 +1,20 @@
-{ lib, stdenv, fetchurl, alsaLib, dbus, ffmpeg_4, libGL, libpulseaudio, libva
-, openssl, udev, xorg, wayland, curl, libpng, libjpeg8 }:
+{ lib
+, stdenv
+, fetchurl
+, alsaLib
+, dbus
+, ffmpeg_4
+, libGL
+, libpulseaudio
+, libva
+, openssl
+, udev
+, xorg
+, wayland
+, curl
+, libpng
+, libjpeg8
+}:
 
 stdenv.mkDerivation {
   pname = "parsec";
@@ -19,7 +34,7 @@ stdenv.mkDerivation {
     sha256 = "1wrzdmwp84lscmlqipdvi10l7lnisfpnrdyjg24zipkqp0rdgspa";
   };
   latest_parsecd_so = fetchurl {
-    url ="https://builds.parsecgaming.com/channel/release/binary/linux/gz/parsecd-150-90c.so";
+    url = "https://builds.parsecgaming.com/channel/release/binary/linux/gz/parsecd-150-90c.so";
     sha256 = "10cbqxh4qqi63acds980ijq26y3nbqr8i2npagmlnbdfa20nknmd";
   };
 
@@ -29,11 +44,26 @@ stdenv.mkDerivation {
   '';
 
   runtimeDependencies = [
-    alsaLib (lib.getLib dbus) libGL libpulseaudio libva.out
-    (lib.getLib openssl) (lib.getLib stdenv.cc.cc) (lib.getLib udev)
-    xorg.libX11 xorg.libXcursor xorg.libXi xorg.libXinerama xorg.libXrandr
-    xorg.libXScrnSaver xorg.libXfixes wayland (lib.getLib ffmpeg_4)
-    (lib.getLib curl) libpng (lib.getLib libjpeg8)
+    alsaLib
+    (lib.getLib dbus)
+    libGL
+    libpulseaudio
+    libva.out
+    (lib.getLib openssl)
+    (lib.getLib stdenv.cc.cc)
+    (lib.getLib udev)
+    xorg.libX11
+    xorg.libXcursor
+    xorg.libXi
+    xorg.libXinerama
+    xorg.libXrandr
+    xorg.libXScrnSaver
+    xorg.libXfixes
+    wayland
+    (lib.getLib ffmpeg_4)
+    (lib.getLib curl)
+    libpng
+    (lib.getLib libjpeg8)
   ];
 
   unpackPhase = ''

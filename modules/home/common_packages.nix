@@ -32,7 +32,7 @@ in
 
     #Git
     gitkraken
-    
+
     #Games
     prismlauncher
     starsector

@@ -1,4 +1,3 @@
-
 { inputs, location, lib, pkgs-stable, pkgs-unstable, system, lanzaboote, username, ... }:
 
 {

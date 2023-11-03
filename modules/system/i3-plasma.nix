@@ -30,10 +30,9 @@
       before = [ "plasma-workspace-x11.target" ];
       wantedBy = [ "plasma-workspace-x11.target" ];
 
-      serviceConfig = 
-      {
-        ExecStart="%h/.nix-profile/bin/i3";
-        ExecReload="%h/.nix-profile/bin/i3-msg reload";
+      serviceConfig = {
+        ExecStart = "%h/.nix-profile/bin/i3";
+        ExecReload = "%h/.nix-profile/bin/i3-msg reload";
         Restart = "on-failure";
       };
 

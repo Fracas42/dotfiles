@@ -96,10 +96,10 @@
         "${modifier}+f" = "fullscreen toggle";
         "${modifier}+Shift+space" = "floating toggle";
         "${modifier}+Shift+s" = "sticky toggle";
-        
-        
+
+
         # Workspaces
-        
+
         ## Switch workspace
         "${modifier}+0" = "workspace 10";
         "${modifier}+1" = "workspace 1";
