@@ -13,6 +13,7 @@ let
     ".config/plasmanotifyrc"
     ".config/plasmashellrc"
     ".config/kdeglobals"
+    ".config/spectaclerc"
 
     # XDG
     ".config/mimeapps.list"

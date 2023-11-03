@@ -1,0 +1,14 @@
+[$Version]
+update_info=spectacle_clipboard.upd:clipboard-settings-change,spectacle_rememberregion.upd:spectacle-migrate-rememberregion
+
+[General]
+clipboardGroup=PostScreenshotCopyImage
+rememberLastRectangularRegion=Never
+showCaptureInstructions=false
+
+[GuiConfig]
+captureMode=0
+window-position=50,21
+
+[Save]
+lastSaveLocation=file:///home/fracas/Pictures/Screenshot_20231031_224027.png
