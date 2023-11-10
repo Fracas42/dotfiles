@@ -45,3 +45,4 @@ As for update the home-manager environment: `home-manager switch`.
 # Credits
 
 * [baptnix](https://github.com/baptman21/baptnix)
+* [i3 and  KDE Plasma](https://github.com/heckelson/i3-and-kde-plasma)
