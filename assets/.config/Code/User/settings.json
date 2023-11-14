@@ -50,4 +50,5 @@
     "cmake.configureOnOpen": true,
     "clang-format.assumeFilename": ".clang-format",
     "git.openRepositoryInParentFolders": "never",
+    "update.mode": "none",
 }
