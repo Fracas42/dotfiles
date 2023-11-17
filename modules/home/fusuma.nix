@@ -3,7 +3,7 @@
 {
   services.fusuma = {
     enable = true;
-    extraPackages = with pkgs; [ coreutils-full xdotool ];
+    extraPackages = with pkgs; [ coreutils-full xdotool xorg.xprop ];
     settings = {
       threshold = {
         swipe = 0.1;
@@ -12,6 +12,10 @@
         swipe = 0.8;
       };
       swipe = {
+        "3" = {
+          left = { command = "exec ${pkgs.i3-gaps}/bin/i3 focus left"; };
+          right = { command = "exec ${pkgs.i3-gaps}/bin/i3 focus right"; };
+        };
         "4" = {
           left = { command = "exec ${pkgs.i3-gaps}/bin/i3 workspace prev"; };
           right = { command = "exec ${pkgs.i3-gaps}/bin/i3 workspace next"; };
