@@ -29,6 +29,7 @@ in
     clang-tools
     gdb
     unzip
+    man-pages
 
     #Git
     gitkraken
