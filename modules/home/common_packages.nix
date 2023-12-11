@@ -51,6 +51,7 @@ in
     anydesk
     direnv
     nerdfonts
+    virt-manager
 
     #Network
     ciscoPacketTracer8
