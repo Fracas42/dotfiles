@@ -22,7 +22,7 @@ stdenv.mkDerivation {
 
   src = fetchurl {
     url = "https://builds.parsecgaming.com/package/parsec-linux.deb";
-    sha256 = "1gak01lxbi88zddvywkapvqwxk6a7xyqlfdcix0f57k0n2brsm5c";
+    sha256 = "1vl0bzjssafccv0dhrq5b947xynqhfmzarczxrm8ld9lp4is1azy";
   };
 
   # The upstream deb package is out of date and doesn't work out of the box
@@ -31,16 +31,16 @@ stdenv.mkDerivation {
   # fetch the latest binaries.
   latest_appdata = fetchurl {
     url = "https://builds.parsecgaming.com/channel/release/appdata/linux/latest";
-    sha256 = "1wrzdmwp84lscmlqipdvi10l7lnisfpnrdyjg24zipkqp0rdgspa";
+    sha256 = "1wag5xd33r9z179q7hpb472lsfyibsaaqk1z9in1qxz9nblr5y7a";
   };
   latest_parsecd_so = fetchurl {
-    url = "https://builds.parsecgaming.com/channel/release/binary/linux/gz/parsecd-150-90c.so";
-    sha256 = "10cbqxh4qqi63acds980ijq26y3nbqr8i2npagmlnbdfa20nknmd";
+    url = "https://builds.parsecgaming.com/channel/release/binary/linux/gz/parsecd-150-91a.so";
+    sha256 = "0v1c4kmw3b66cc1343290y2x3ix7cwcjzcclg340q9xnr9aj4yaq";
   };
 
   postPatch = ''
     cp $latest_appdata usr/share/parsec/skel/appdata.json
-    cp $latest_parsecd_so usr/share/parsec/skel/parsecd-150-89b.so
+    cp $latest_parsecd_so usr/share/parsec/skel/parsecd-150-91a.so
   '';
 
   runtimeDependencies = [
