@@ -5,6 +5,10 @@
 [KFileDialog Settings]
 detailViewIconSize=16
 
+[KPropertiesDialog]
+1920x1200 screen: Height=559
+1920x1200 screen: Width=540
+
 [PlasmaTransientsConfig]
 PreloadWeight=42
 

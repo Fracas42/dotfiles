@@ -1,9 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-lastest, ... }:
 # Fusuma configuration for touchpad gesture
 {
   services.fusuma = {
     enable = true;
-    extraPackages = with pkgs; [ coreutils-full xdotool xorg.xprop ];
+    extraPackages = with pkgs-lastest; [ coreutils-full xdotool xorg.xprop ];
+    package = pkgs-lastest.fusuma;
     settings = {
       threshold = {
         swipe = 0.1;

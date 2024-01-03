@@ -15,3 +15,6 @@ Seen=true
 
 [Applications][thunderbird]
 Seen=true
+
+[DoNotDisturb]
+Until=2023,12,1,17,0,0.213

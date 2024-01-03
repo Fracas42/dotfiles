@@ -1,4 +1,4 @@
-{ inputs, pkgs, system, pkgs-unstable, ... }:
+{ inputs, pkgs, system, username, ... }:
 
 {
   imports = [ ];
@@ -6,9 +6,9 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.fracas = {
+  users.users."${username}" = {
     isNormalUser = true;
-    description = "Fracas";
+    description = username;
     extraGroups = [ "networkmanager" "wheel" "video" "docker" "input" "wireshark" ];
   };
 
@@ -98,35 +98,6 @@
 
   # Configure console keymap
   console.keyMap = "us-acentos";
-
-  # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  nix = {
-    # Nix Package Manager settings
-    settings = {
-      auto-optimise-store = true;
-    };
-
-    # Garbage collector settings
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
-
-    # Enable nixFlakes on system
-    registry.nixpkgs.flake = inputs.nixpkgs;
-
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-  };
 
   virtualisation = {
     docker.enable = true;

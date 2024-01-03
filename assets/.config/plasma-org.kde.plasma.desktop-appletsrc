@@ -55,7 +55,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][24][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=40
+PreloadWeight=100
 
 [Containments][2][Applets][24][Configuration][Appearance]
 chartFace=org.kde.ksysguard.barchart
@@ -113,7 +113,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][26][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=20
+PreloadWeight=35
 
 [Containments][2][Applets][26][Configuration][Appearance]
 chartFace=org.kde.ksysguard.piechart
@@ -137,7 +137,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][28][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=50
+PreloadWeight=75
 
 [Containments][2][Applets][28][Configuration][Appearance]
 chartFace=org.kde.ksysguard.piechart
@@ -179,7 +179,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][30][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=45
+PreloadWeight=100
 
 [Containments][2][Applets][30][Configuration][Appearance]
 chartFace=org.kde.ksysguard.piechart
@@ -206,7 +206,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][33][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=20
+PreloadWeight=40
 
 [Containments][2][Applets][33][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -253,7 +253,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][2][Applets][40][Configuration]
-PreloadWeight=75
+PreloadWeight=100
 popupHeight=576
 popupWidth=432
 
@@ -317,7 +317,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][8][Applets][11][Configuration]
-PreloadWeight=5
+PreloadWeight=10
 
 [Containments][8][Applets][12]
 immutability=1
@@ -341,7 +341,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][15][Configuration]
-PreloadWeight=55
+PreloadWeight=100
 
 [Containments][8][Applets][15][Configuration][ConfigDialog]
 DialogHeight=720
@@ -369,7 +369,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][20][Configuration]
-PreloadWeight=30
+PreloadWeight=75
 
 [Containments][8][Applets][20][Configuration][General]
 showPercentage=true
@@ -379,14 +379,14 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=84
+PreloadWeight=100
 
 [Containments][8][Applets][22]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][22][Configuration]
-PreloadWeight=4
+PreloadWeight=100
 
 [Containments][8][Applets][24]
 immutability=1
@@ -436,4 +436,4 @@ global=
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/js-rush,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/java-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/creeps,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tiger,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tcom-tps,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/cpp-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/spider,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tiger-ref,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/js-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/eplace,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/nix-pills,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/libzork,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/yaka,0,6639caec-51ad-4f92-a4de-74d28f190be9
+screenMapping=

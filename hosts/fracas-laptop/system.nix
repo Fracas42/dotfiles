@@ -2,10 +2,11 @@
 
 {
   imports = [
-    ../../../../../../etc/nixos/hardware-configuration.nix
+    /etc/nixos/hardware-configuration.nix
     # services
-    ../../modules/system/i3-plasma.nix
-    ../../modules/system/bluetooth.nix
+    ../../modules/nixos/audio.nix
+    ../../modules/nixos/i3-plasma.nix
+    ../../modules/nixos/bluetooth.nix
   ];
 
   networking.hostName = "fracas";
