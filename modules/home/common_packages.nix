@@ -52,6 +52,7 @@ in
     direnv
     nerdfonts
     virt-manager
+    docker-compose
 
     #Network
     ciscoPacketTracer8
