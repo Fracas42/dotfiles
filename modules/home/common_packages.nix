@@ -18,7 +18,6 @@ in
 
     #Com
     discord
-    slack
     tdesktop
     thunderbird
 
@@ -30,9 +29,6 @@ in
     gdb
     unzip
     man-pages
-
-    #Git
-    gitkraken
 
     #Games
     prismlauncher
