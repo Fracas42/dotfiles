@@ -44,17 +44,14 @@ in
 
     #Others
     chatterino2
-    authy
     vlc
     nil
     parsec-gaming
     anydesk
     direnv
-    nerdfonts
     virt-manager
 
     #Network
-    ciscoPacketTracer8
     inetutils
   ];
 }

@@ -3,8 +3,10 @@
   services = {
     xserver = {
       enable = true;
-      layout = "us";
-      xkbVariant = "intl";
+      xkb = {
+        layout = "us";
+        variant = "intl";
+      };
       displayManager = {
         defaultSession = "plasma5+i3";
         gdm.enable = true;

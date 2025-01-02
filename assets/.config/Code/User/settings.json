@@ -51,4 +51,5 @@
     "clang-format.assumeFilename": ".clang-format",
     "git.openRepositoryInParentFolders": "never",
     "update.mode": "none",
+    "database-client.autoSync": true,
 }

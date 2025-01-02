@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
@@ -44,5 +44,8 @@
     wireshark.enable = true;
     light.enable = true;
     ssh.startAgent = true;
+    steam.enable = true;
   };
+
+  fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerdfonts);
 }

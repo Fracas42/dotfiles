@@ -55,7 +55,7 @@ plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][24][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=40
+PreloadWeight=95
 
 [Containments][2][Applets][24][Configuration][Appearance]
 chartFace=org.kde.ksysguard.barchart
@@ -379,14 +379,14 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=84
+PreloadWeight=97
 
 [Containments][8][Applets][22]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][22][Configuration]
-PreloadWeight=4
+PreloadWeight=76
 
 [Containments][8][Applets][24]
 immutability=1
@@ -436,4 +436,4 @@ global=
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/js-rush,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/java-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/creeps,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tiger,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tcom-tps,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/cpp-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/spider,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tiger-ref,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/js-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/eplace,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/nix-pills,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/libzork,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/yaka,0,6639caec-51ad-4f92-a4de-74d28f190be9
+screenMapping=desktop:/js-rush,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tcom-tps,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/yaka,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/nix-pills,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/eplace,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tiger-ref,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/libzork,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/java-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/tiger,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/js-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/cpp-workshop,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/creeps,0,6639caec-51ad-4f92-a4de-74d28f190be9,desktop:/spider,0,6639caec-51ad-4f92-a4de-74d28f190be9

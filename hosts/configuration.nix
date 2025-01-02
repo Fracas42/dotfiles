@@ -38,7 +38,7 @@
 
   time = {
     # Set your time zone.
-    timeZone = "Europe/Paris";
+    timeZone = "America/Chicago";
     # Use local time instead of UTC for dualboot compatibility
     hardwareClockInLocalTime = true;
   };
@@ -66,12 +66,15 @@
       enable = true;
 
       # Configure keymap in X11
-      layout = "us";
-      xkbVariant = "intl";
+      xkb = {
+        layout = "us";
+        variant = "intl";
+      };
 
-      # Enable touchpad support
-      libinput.enable = true;
     };
+
+    # Enable touchpad support
+    libinput.enable = true;
 
     pipewire = {
       enable = true;
@@ -100,7 +103,6 @@
   console.keyMap = "us-acentos";
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
@@ -121,7 +123,7 @@
     };
 
     # Enable nixFlakes on system
-    registry.nixpkgs.flake = inputs.nixpkgs;
+    registry.nixpkgs.flake = inputs.nixpkgs-stable;
 
     extraOptions = ''
       experimental-features = nix-command flakes
@@ -130,12 +132,12 @@
 
   virtualisation = {
     docker.enable = true;
-    virtualbox.host.enable = true;
+    #virtualbox.host.enable = true;
     libvirtd.enable = true;
   };
 
   system = {
-    stateVersion = "23.11";
+    stateVersion = "24.11";
     autoUpgrade.enable = true;
     autoUpgrade.allowReboot = true;
   };
