@@ -29,6 +29,7 @@ in
     gdb
     unzip
     man-pages
+    nix-index
 
     #Games
     prismlauncher
