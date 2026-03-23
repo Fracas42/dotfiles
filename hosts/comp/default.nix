@@ -20,12 +20,11 @@
         efiSysMountPoint = "/boot";
       };
 
-      grub = {
-        enable = true;
-        device = "nodev";
-        useOSProber = true;
-      };
+    };
 
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/var/lib/sbctl";
     };
 
     # Setup keyfile
@@ -40,7 +39,6 @@
     initrd.luks.devices."swap".device = "/dev/disk/by-uuid/adde261c-328c-45c4-af26-fb526a7d1533";
 
     bootspec.enable = true;
-    bootspec.package = lanzaboote;
   };
 
   programs = {
