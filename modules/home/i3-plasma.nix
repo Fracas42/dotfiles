@@ -165,7 +165,7 @@
 
       startup = [
         {
-          command = "${pkgs.feh}/bin/feh --bg-scale ${../../assets/wallpapers/silly-blep-wallpaper.png}";
+          command = "${pkgs.feh}/bin/feh --bg-scale ${../../assets/wallpapers/wallpaper.jpg}";
           always = true;
           notification = false;
         }
