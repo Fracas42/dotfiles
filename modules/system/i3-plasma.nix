@@ -6,7 +6,6 @@
       enable = true;
       xkb = {
         layout = "us";
-        variant = "intl";
       };
       displayManager = {
         gdm.enable = true;
