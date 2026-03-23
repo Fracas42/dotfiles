@@ -94,9 +94,6 @@
       VISUAL = "vim";
       PAGER = "less";
     };
-    systemPackages = [
-      inputs.home-manager.defaultPackage.${system}
-    ];
   };
 
   # Configure console keymap
@@ -136,7 +133,7 @@
   };
 
   system = {
-    stateVersion = "24.11";
+    stateVersion = "25.11";
     autoUpgrade.enable = true;
     autoUpgrade.allowReboot = true;
   };

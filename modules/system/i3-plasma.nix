@@ -1,6 +1,7 @@
 { pkgs, username, ... }:
 {
   services = {
+    displayManager.defaultSession = "plasma+i3";
     xserver = {
       enable = true;
       xkb = {
@@ -8,19 +9,18 @@
         variant = "intl";
       };
       displayManager = {
-        defaultSession = "plasma5+i3";
         gdm.enable = true;
         session = [
           {
             manage = "desktop";
-            name = "plasma5+i3";
+            name = "plasma+i3";
             start = ''
-              env ${pkgs.plasma-workspace}/bin/startplasma-x11
+              env ${pkgs.kdePackages.plasma-workspace}/bin/startplasma-x11
             '';
           }
         ];
       };
-      desktopManager.plasma5.enable = true;
+      desktopManager.plasma6.enable = true;
       windowManager.i3.enable = true;
       videoDrivers = [ "amdgpu" ];
     };

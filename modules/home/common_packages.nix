@@ -1,7 +1,6 @@
 { pkgs, pkgs-stable, pkgs-lastest, ... }:
 # Packages to install
 let
-  parsec-gaming = pkgs.callPackage ../pkgs/parsecd.nix { };
 in
 {
   home.packages = with pkgs; [
@@ -11,14 +10,13 @@ in
 
     #IDE
     vim
-    jetbrains.idea-ultimate
 
     #Frameworks
     pkgs-stable.wireshark
 
     #Com
     discord
-    tdesktop
+    telegram-desktop
     thunderbird
 
     #CLI
@@ -43,7 +41,7 @@ in
     chatterino2
     vlc
     nil
-    parsec-gaming
+    parsec-bin
     anydesk
     direnv
     virt-manager

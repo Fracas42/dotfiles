@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.kitty = {
@@ -6,7 +6,7 @@
     extraConfig = ''
       confirm_os_window_close 0
     '';
-    theme = "Dark Pride";
+    themeFile = "dark_pride";
     font.name = "Hack Nerd Font";
   };
 }

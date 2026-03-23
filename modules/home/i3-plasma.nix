@@ -14,7 +14,7 @@
 
   xsession.windowManager.i3 = {
     enable = true;
-    package = pkgs.i3-gaps;
+    package = pkgs.i3;
     config = {
       colors = {
         focused = { border = "#010101"; childBorder = "#010101"; background = "#13b019"; text = "#80FFF9"; indicator = "#08D19F"; };

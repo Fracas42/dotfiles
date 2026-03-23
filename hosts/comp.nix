@@ -11,7 +11,7 @@ inputs.nixpkgs-stable.lib.nixosSystem {
   inherit system;
 
   specialArgs = {
-    inherit host inputs location system pkgs-stable pkgs-unstable username;
+    inherit host inputs location system pkgs-stable pkgs-unstable username lanzaboote;
   };
 
   modules = [

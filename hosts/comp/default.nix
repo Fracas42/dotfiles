@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, lanzaboote, ... }:
 
 {
   imports = [
@@ -19,11 +19,13 @@
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot";
       };
-    };
 
-    lanzaboote = {
-      enable = true;
-      pkiBundle = "/etc/secureboot";
+      grub = {
+        enable = true;
+        device = "nodev";
+        useOSProber = true;
+      };
+
     };
 
     # Setup keyfile
@@ -38,6 +40,7 @@
     initrd.luks.devices."swap".device = "/dev/disk/by-uuid/adde261c-328c-45c4-af26-fb526a7d1533";
 
     bootspec.enable = true;
+    bootspec.package = lanzaboote;
   };
 
   programs = {
@@ -47,5 +50,5 @@
     steam.enable = true;
   };
 
-  fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerdfonts);
+  fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }
